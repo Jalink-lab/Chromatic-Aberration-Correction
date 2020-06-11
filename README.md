@@ -9,7 +9,7 @@ When the plugin is added to the `Fiji.app/plugins` folder of [Fiji](https://fiji
 
 ![menu](img/screenshot1.PNG)
 
-`Callibrate Affine` requires two ThunderStorm .csv files for `Positions 1` and `Positions 2`. They must have matching coordinates. So the coordinates in the first row of `Positions 1` will be compared to to the coordinates in the first row of `Positions 2`. All positions are used to calculate the optimal affine transform. This is then saved in the `Output folder` with a name depending on the Wavelength. `AffineTransform<wavelengt>.json` 
+`Callibrate Affine` requires two .csv files for `Positions 1` and `Positions 2`. They must each have at least two columns with `x [nm]` and `y [nm]`in the header. They must have matching coordinates. So the coordinates in the first row of `Positions 1` will be compared to to the coordinates in the first row of `Positions 2`. All positions are used to calculate the optimal affine transform. This is then saved in the `Output folder` with a name depending on the Wavelength. `AffineTransform<wavelengt>.json` 
 
 ![menu](img/screenshot2.PNG)
 

@@ -5,7 +5,7 @@ Requires a few plugins to work properly, see https://jalink-lab.github.io/.
 If ImageJ cannot find com/opencsv/CSVreader just update imagej to the latest version.
 
 # Quick Guide
-When the plugin is added to the `Fiji.app/plugins` folder of [Fiji](https://fiji.sc/) the following items are added to the plugins menu:
+When the [plugin](https://github.com/Jalink-lab/Chromatic-Aberration-Correction/releases) is added to the `Fiji.app/plugins` folder of [Fiji](https://fiji.sc/) the following items are added to the plugins menu:
 
 ![menu](img/screenshot1.PNG)
 

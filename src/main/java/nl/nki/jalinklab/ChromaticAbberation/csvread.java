@@ -1,5 +1,5 @@
 /* 
- * Copyright (C) 2018 Rolf Harkes
+ * Copyright (C) 2020 Rolf Harkes
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package Classes;
+package nl.nki.jalinklab.ChromaticAbberation;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,6 +23,8 @@ import java.io.IOException;
 import com.opencsv.CSVReader;
 import java.util.Iterator;
 import java.util.List;
+
+import org.scijava.log.LogService;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -37,16 +39,16 @@ public class csvread {
     private String[] header;
     private double[][] data; //[row] [column]
 
-    public csvread(File name) {
+    public csvread(File name, LogService log) {
         file = name;
         try (CSVReader reader = new CSVReader(new FileReader(file))) {
             header = getcsvheader(reader);
             data = getcsvdata(reader);
             reader.close();
         } catch (FileNotFoundException ex) {
-            
+            log.error(file + " not found");
         } catch (IOException ex) {
-            
+        	log.error("cannot read from " + file);
         }
     }
 

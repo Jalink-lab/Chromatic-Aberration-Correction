@@ -1,5 +1,5 @@
 /* 
- * Copyright (C) 2018 Rolf Harkes
+ * Copyright (C) 2020 Rolf Harkes
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package Classes;
+package nl.nki.jalinklab.ChromaticAbberation;
 
 import java.io.File;
 import com.opencsv.CSVWriter;
@@ -22,6 +22,8 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Locale;
+
+import org.scijava.log.LogService;
 
 public class csvwrite {
     private File file;
@@ -50,7 +52,7 @@ public class csvwrite {
             data[i][col]=d[i]; //for all rows
         }
     }
-    public void writeall(){
+    public void writeall(LogService log){
         try {
             file.createNewFile();
             CSVWriter writer = new CSVWriter(new FileWriter(file));
@@ -65,9 +67,9 @@ public class csvwrite {
             }
             writer.close();
         } catch (FileNotFoundException ex) {
-            
+        	log.error(file + " not found");
         } catch (IOException ex) {
-            
+        	log.error("cannot read from " + file);
         }
     }
 }

@@ -14,7 +14,7 @@
 
     <groupId>nl.nki-avl</groupId>
     <artifactId>Chromatic-Aberration-Correction</artifactId>
-    <version>1.12</version>
+    <version>1.13</version>
 
     <name>Chromatic Aberration Correction</name>
     <description>This plugin provides Chromatic Aberration Correction. It was developed for post-processing SMLM datasets generated using ThunderSTORM.</description>

@@ -1,6 +1,6 @@
 // Marco to retrieve x,y coordinates of tetraspec beads for chromatic abberation correction.
 // Input: 3-channel high-res file with beads
-// Output: text file with bead coordinates, to be fed into R
+// Output: text file with bead coordinates
 //
 // author: Bram van den Broek (b.vd.broek@nki.nl), The Netherlands Cancer Institute, 2016
 
